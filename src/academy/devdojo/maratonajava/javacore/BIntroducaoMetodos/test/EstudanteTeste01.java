@@ -27,5 +27,8 @@ public class EstudanteTeste01 {
 
         //System.out.println("Nome: "+estudante01.nome + " Idade: " + estudante01.idade +" Sexo: " + estudante01.sexo);
         //System.out.println("Nome: "+estudante02.nome + " Idade: " + estudante02.idade +" Sexo: " + estudante02.sexo);
+
+        // caso altere os valores na classe de impressão ira modificar tambem normalmente, por conta de passar asreferencas no objeto, sendo utilizados/modificados dentro da classe de origen ou não
+
     }
 }
