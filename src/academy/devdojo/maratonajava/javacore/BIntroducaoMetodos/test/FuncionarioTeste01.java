@@ -19,13 +19,19 @@ import academy.devdojo.maratonajava.javacore.BIntroducaoMetodos.domain.Funcionar
 public class FuncionarioTeste01 {
     public static void main(String[] args) {
         Funcionario funcionario = new Funcionario();
-        funcionario.nome = "Micalateia";
-        funcionario.idade = 28;
-        //funcionario.salario = new double[] {2893.28,5957.69,6484.54};
+        funcionario.setNome("Micalateia");
+        funcionario.setIdade(28);
+        funcionario.setSalario(new double[] {2893.28,5957.69,6484.54});
 
         funcionario.imprimir();
         System.out.println("-------------------------");
         funcionario.tirarMedias();
+
+        System.out.println("---metodos get e set:---");
+
+        System.out.println(funcionario.getNome());
+        System.out.println(funcionario.getIdade());
+        System.out.println(funcionario.getDivisao());
 
     }
 }

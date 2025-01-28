@@ -14,36 +14,66 @@ crie dois metodos
 
 */
 public class Funcionario {
-    public String nome;
-    public byte idade;
-    public double[] salario;
+    private String nome;
+    private int idade;
+    private double[] salario;
+    //protegendo os atributos
+    private double soma;
+    private double divisao;
 
-    public void imprimir(){
-        System.out.println("Nome: "+this.nome);
-        System.out.println("Idade: "+this.idade);
+    public void imprimir() {
+        System.out.println("Nome: " + this.nome);
+        System.out.println("Idade: " + this.idade);
         //System.out.println(this.salario);
-        if(salario != null) {
+        if (salario != null) {
             for (int i = 0; i < salario.length; i++) {
                 System.out.println(i + 1 + "°: " + salario[i]);
             }
-        }else{
+        } else {
             System.out.println("Digite os valores de salário!");
         }
     }
 
     //corrigindo e usando o returna
-    public void tirarMedias(){
-        if(salario == null){
-            return ;
+    public void tirarMedias() {
+        if (salario == null) {
+            return;
         }
-        double soma = 0;
-        double divisao =0 ;
 
-            for (int j = 0; j<this.salario.length;j++){
-                soma += this.salario[j];
-                divisao = soma/ salario.length;
+
+        for (int j = 0; j < this.salario.length; j++) {
+            this.soma += this.salario[j];
+            this.divisao = this.soma / salario.length;
         }
-        System.out.println("A média de salário dos últimos "+ salario.length +" meses é: "+divisao);
+        System.out.println("A média de salário dos últimos " + salario.length + " meses é: " + divisao);
     }
 
+    //agroa criando os metodios get ou set
+
+
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
+
+    public void setIdade(int idade) {
+        this.idade = idade;
+    }
+
+    public void setSalario(double[] salario) {
+        this.salario = salario;
+    }
+
+
+    public String getNome() {
+        return nome;
+    }
+
+    public int getIdade() {
+        return idade;
+    }
+
+
+    public double getDivisao() {
+        return divisao;
+    }
 }
