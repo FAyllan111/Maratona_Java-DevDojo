@@ -1,6 +1,6 @@
-package academy.devdojo.maratonajava.javacore.CSobrecargaMetodos.test;
+package academy.devdojo.maratonajava.desafiosGPT.test;
 
-import academy.devdojo.maratonajava.javacore.CSobrecargaMetodos.domain.Produto;
+import academy.devdojo.maratonajava.desafiosGPT.domain.Produto;
 
 public class ProdutoTeste {
     public static void main(String[] args) {

@@ -1,4 +1,4 @@
-package academy.devdojo.maratonajava.javacore.CSobrecargaMetodos.domain;
+package academy.devdojo.maratonajava.desafiosGPT.domain;
 
 public class Produto {
     private String nome;
