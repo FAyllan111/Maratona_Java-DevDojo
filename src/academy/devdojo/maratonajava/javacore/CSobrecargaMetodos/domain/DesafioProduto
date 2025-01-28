@@ -1,0 +1,30 @@
+/*
+Problema:
+O objetivo era criar uma classe `Produto` e realizar operações relacionadas a produtos em estoque. O programa deveria incluir as seguintes funcionalidades:
+
+1. Criar uma classe `Produto` com atributos:
+   - `nome` (nome do produto)
+   - `preco` (preço do produto)
+   - `quantidadeEstoque` (quantidade em estoque do produto)
+   - `categoria` (categoria do produto)
+
+2. Implementar métodos:
+   - Métodos `init` para inicializar os atributos do produto, utilizando sobrecarga de métodos para permitir inicializações com ou sem a categoria do produto.
+   - Método `imprime` para exibir as informações do produto, incluindo nome, preço, quantidade em estoque, e categoria.
+   - Método `verificarEstoque` para alertar se a quantidade de um produto está abaixo do mínimo aceitável (definido como 10 unidades).
+
+3. Validações:
+   - Durante a inicialização do produto (nos métodos `init`), verificar se o preço ou a quantidade em estoque são valores negativos ou iguais a zero. Caso isso ocorra, exibir uma mensagem de erro e impedir a inicialização.
+
+4. Criar uma classe de teste `ProdutoTeste`:
+   - Instanciar diversos objetos do tipo `Produto` com valores válidos e inválidos.
+   - Chamar os métodos implementados para testar a funcionalidade de exibição e validação.
+
+Desafios encontrados e resolvidos:
+- Garantir que o método `init` verificasse corretamente os valores inválidos e impedisse a criação de produtos com dados inconsistentes.
+- Incluir um alerta visual no método `verificarEstoque` para destacar quando a quantidade de estoque estivesse abaixo do valor mínimo.
+- Fazer com que o código fosse claro e organizado, com mensagens descritivas para ajudar no entendimento e depuração.
+
+Solução:
+A solução final inclui a criação dos métodos mencionados, validações para dados inválidos, e a exibição das informações dos produtos com destaque para casos de baixa quantidade no estoque. A classe de teste foi utilizada para verificar a funcionalidade de cada método e garantir que todos os casos, válidos e inválidos, fossem tratados adequadamente.
+*/
