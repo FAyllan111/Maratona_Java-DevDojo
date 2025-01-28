@@ -1,20 +1,31 @@
-package academy.devdojo.maratonajava.javacore.CSobrecargaMetodos.domain;
+package academy.devdojo.maratonajava.javacore.DConstrutores.domain;
 
 public class Anime {
     private String tipo;
     private String nome;
     private String genero;
     private int episodios;
+    private String estudio;
 
-    //metodos construtoes
+    //metodos construtoes => obriga se os metodos vão ter certas classes, meio que como uma base obrigatoria para constrtuir o metodo
+    //initiando tudo no construtor, ou seja o metodo init se tornou obsoleto
+    public Anime(String nome,String tipo,int episodios,String genero){
+        this.nome = nome;
+        this.tipo = tipo;
+        this.episodios = episodios;
+        this.genero = genero;
 
-    public Anime(){
 
     }
+    //da mesma maneira que existe a sobrecarga de metdoso vai existir tambem a sobrecarga de construtores
+    public Anime(String nome,String tipo,int episodios,String genero,String estudio){
+        //para chanar o outro construtor chama apenas o this e dentro do proprio consttrutor
+        //this chamando construtor é sempre a primeira linha exceutavel
+        this(nome,tipo,episodios,genero);
+        this.estudio = estudio;
+    }
 
-    //repare que os metodos init e init 2 fazem basicmaente as mesmas coisas, apenas adicionando novos argumentos, nesse caso pode-se utilizar da sobrecarga de metodos
-
-    //o que é sobrecarga => quando utilizo o mesmo nome do metodo para as alterações de quantidade de de parametros ou o tipo dos parametros diferentes, mantendo a visibilidade e os tipos os mesmos
+    /*  OBSOLETO POR CONTA QUE JA SE INICIOU O CONSTRUTOR
     public void init(String nome,String tipo,int episodios){
         this.nome = nome;
         this.tipo = tipo;
@@ -27,12 +38,13 @@ public class Anime {
         this.init(nome,tipo,episodios);
         this.episodios = episodios;
     }
-
+*/
     public void imprime(){
         System.out.println(this.nome);
         System.out.println(this.tipo);
         System.out.println(this.episodios);
         System.out.println(this.genero);
+        System.out.println(this.estudio);
     }
 
 
@@ -66,5 +78,13 @@ public class Anime {
 
     public String getGenero(){
         return this.genero;
+    }
+
+    public String getEstudio() {
+        return estudio;
+    }
+
+    public void setEstudio(String estudio) {
+        this.estudio = estudio;
     }
 }
